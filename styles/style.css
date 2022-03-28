@@ -1,13 +1,21 @@
 
 body{
     text-align: center;
+    background-color: #f03917;
+}
+
+#stage{
+    height: 500px;
+    width: 500px;
+    margin: auto;
 }
 
 .square{
-    height: 100px;
-    width: 100px;
-    background-color: bisque;
+    height: 150px;
+    width: 150px;
+    background-color: black;
     border: 1px black solid;
+    border-radius: 10px;
     display: inline-block;
     
 }
@@ -24,7 +32,7 @@ h1{
     content: "\274C";
     font-size: 50px;
     position: absolute;
-    line-height: 100px;
+    line-height: 150px;
     left: 0px;
     right: 0px;
     bottom: 0px;
@@ -39,7 +47,7 @@ h1{
     content: "\2B55";
     font-size: 50px;
     position: absolute;
-    line-height: 100px;
+    line-height: 150px;
     left: 0px;
     right: 0px;
     bottom: 0px;
