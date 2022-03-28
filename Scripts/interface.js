@@ -15,7 +15,13 @@ function clicado(e){
 
     let postion = e.target.id
  
-    playerMove(postion)
+    if(playerMove(postion)){
+        
+        setTimeout(()=>{
+            alert('O jogo acabou,')
+        },10)
+        
+    }
     updateSquare()
 
 }
