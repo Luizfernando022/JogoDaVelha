@@ -4,11 +4,14 @@ body{
     background-color: #f03917;
     padding: 0;
     margin: 0;
-    min-width: 600px;
+    min-width: 300px;
 }
 
 #stage{
-
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
 }
 
 .square{
@@ -43,28 +46,7 @@ h1{
 .x{
     position: relative;
 }
-#ganhador{
-    background-color: black;
-    height: calc(100% - 37px);
-    width: 500px;
-    border-radius: 0px 20px 20px 0px;
-    position: absolute;
-    left: -100%;
-    animation-duration: 3s;
-    animation-timing-function: cubic-bezier(1,0,0,1);
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    display: none;
-}
-#placar{
-    background-color: black;
-    height: calc(100% - 37px);
-    width: 200px;
-    border-radius: 20px 0px 0px 20px;
-    position: absolute;
-    right: -100%;
-    display: none;
-}
+
 
 .x::after{
     content: "\2B55";
@@ -87,13 +69,7 @@ h1{
 .in:focus{
     border: red 2px solid;
 }
-#canvas{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 500px;
-  
-}
+
 #btn{
     padding: 10px 20px;
     margin: 13px 10px;
@@ -107,7 +83,12 @@ h1{
 
 @media screen  and (max-width:768px){
 
-    #canvas{flex-direction: column; margin-top: 100px; gap: 20px;}
+    #stage{flex-direction: column; margin-top: 50px; gap: 20px;}
+    .square{
+        width: 100px;
+        height: 100px;
+    }
+    
 
 }
 
