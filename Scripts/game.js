@@ -1,7 +1,5 @@
 let board = ["","","","","","","","","",]
 let playerTime = 0
-let jogador1 = document.querySelectorAll('.in')[0].value
-let jogador2 = document.querySelectorAll('.in')[1].value
 let symbols = ['o','x']
 let gameover = false
 
