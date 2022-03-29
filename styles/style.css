@@ -4,7 +4,8 @@ body{
     background-color: #f03917;
     padding: 0;
     margin: 0;
-    min-width: 300px;
+    min-width: calc(300px 
+    + 30px);
 }
 
 #stage{
