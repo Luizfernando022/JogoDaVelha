@@ -21,7 +21,6 @@ function playerMove(position){
     if(gameover){
         return;
     }
-    console.log(gameover)
     if(board[position] == ''){
     board[position] = symbols[playerTime]
 
