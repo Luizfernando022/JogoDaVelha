@@ -88,9 +88,10 @@ h1 {
 .in {
   padding: 10px;
   background-color: black;
-  border: #f03917;
   border-radius: 10px;
   color: #f03917;
+  outline: none;
+  border: 2px solid lime;
 }
 .in:focus {
   border: red 2px solid;
@@ -124,16 +125,16 @@ h1 {
   align-items: center;
   background-color: black;
   border-radius: 20px;
-  border: 2px red solid;
+  border: 2px green solid;
   position: absolute;
   top: calc(75% - 300px);
   left: calc(50% - 250px);
-  /* animation-name: teste; */
-  animation-duration: 3s;
-  animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  animation-duration: 2s;
+  animation-timing-function:cubic-bezier(0.455, 0.03, 0.515, 0.955);
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   color: white;
+  z-index: 10;
 }
 ul {
   font-size: 22px;

@@ -10,6 +10,13 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 })
 
+document.querySelectorAll('.in')[0].addEventListener("input",()=>{
+    document.getElementById('p1').innerHTML = document.querySelectorAll('.in')[0].value
+})
+document.querySelectorAll('.in')[1].addEventListener("input",()=>{
+    document.getElementById('p2').innerHTML = document.querySelectorAll('.in')[1].value
+})
+
 
 function clicado(e){
 
@@ -34,13 +41,13 @@ function clicado(e){
        
         
         if(playerTime == 1){
-        setTimeout(()=>{
-            alert(`O jogo acabou, ${jogador2} Ganhou`)
-        },100)
+            document.getElementById('vencedor').innerHTML = `${jogador2} Ganhou!`
+        document.getElementById('window').style.display = "flex"
+        document.getElementById('floatWindow').style.animationName = "floatWindow"
     }else{
-        setTimeout(()=>{
-            alert(`O jogo acabou, ${jogador1} Ganhou`)
-        },100)
+        document.getElementById('vencedor').innerHTML = `${jogador1} Ganhou!`
+        document.getElementById('window').style.display = "flex"
+        document.getElementById('floatWindow').style.animationName = "floatWindow"
     }
         
     }
