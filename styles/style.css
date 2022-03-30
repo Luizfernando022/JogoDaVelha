@@ -1,95 +1,177 @@
-
-body{
-    text-align: center;
-    background-color: #f03917;
-    padding: 0;
+body {
+  text-align: center;
+  background-color: lime;
+  padding: 0;
+  margin: 0;
+  min-width: 330px;
+}
+#error > h2{
     margin: 0;
-    min-width: calc(300px 
-    + 30px);
+    padding: 0;
+    color: white;
+    text-shadow: 1px 1px 10px lime;
+}
+#error{
+    background-color: black;
+    height: 70px;
+    width: 300px;
+    margin: auto;
+    position: relative;
+    top: -100px;
+    /* animation-name: error; */
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-duration: 5s;
+    border-radius: 0px 0px 20px 20px;
+}
+@keyframes error{
+    0%{}
+    20%{top: 0;}
+    70%{top: 0;}
+    100%{top: -100px;}
 }
 
-#stage{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+#stage {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(1,0,0,1);
+  transition-duration: 2;
+}
+
+.square {
+  height: 150px;
+  width: 150px;
+  background-color: black;
+  border: 3px green solid;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.o {
+  position: relative;
+}
+
+.o::after {
+  content: "\274C";
+  font-size: 50px;
+  position: absolute;
+  line-height: 150px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+}
+
+.x {
+  position: relative;
+}
+
+.x::after {
+  content: "\2B55";
+  font-size: 50px;
+  position: absolute;
+  line-height: 150px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+}
+
+.in {
+  padding: 10px;
+  background-color: black;
+  border: #f03917;
+  border-radius: 10px;
+  color: #f03917;
+}
+.in:focus {
+  border: red 2px solid;
+}
+
+#btn {
+  padding: 10px 20px;
+  margin: 13px 10px;
+  background-color: #f03917;
+  color: black;
+  font-weight: 600px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+}
+#window {
+  position: absolute;
+  width: 100%;
+  min-width: 330px;
+  top: 0%;
+  height: 600px;
+  display: none;
+}
+#floatWindow {
+  height: 400px;
+  max-width: 500px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 20px;
+  border: 2px red solid;
+  position: absolute;
+  top: calc(75% - 300px);
+  left: calc(50% - 250px);
+  /* animation-name: teste; */
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  color: white;
+}
+ul {
+  font-size: 22px;
+  margin-left: -30px;
+}
+li {
+  list-style: none;
+}
+@keyframes floatWindow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #stage {
+    flex-direction: column;
     margin-top: 50px;
+    gap: 20px;
+  }
+  .square {
+    width: 100px;
+    height: 100px;
+  }
+  #floatWindow {
+    width: 300px;
+    max-width: 300px;
+    left: calc(50% - 150px);
+    bottom: 0;
+    top: calc(50% - 100px);
+  }
+  .o::after {
+    line-height: 100px;
+  }
+  .x::after {
+    line-height: 100px;
+  }
 }
-
-.square{
-    height: 150px;
-    width: 150px;
-    background-color: black;
-    border: 2px red solid;
-    border-radius: 10px;
-    display: inline-block;
-    
-}
-
-h1{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.o{
-    position: relative;
-}
-
-.o::after{
-    content: "\274C";
-    font-size: 50px;
-    position: absolute;
-    line-height: 150px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    top: 0px;
-}
-
-.x{
-    position: relative;
-}
-
-
-.x::after{
-    content: "\2B55";
-    font-size: 50px;
-    position: absolute;
-    line-height: 150px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    top: 0px;
-}
-
-.in{
-    padding: 10px;
-    background-color: black;
-    border:#f03917;
-    border-radius: 10px;
-    color: #f03917;
-}
-.in:focus{
-    border: red 2px solid;
-}
-
-#btn{
-    padding: 10px 20px;
-    margin: 13px 10px;
-    background-color: #f03917;
-    color: black;
-    font-weight: 600px;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-}
-
-@media screen  and (max-width:768px){
-
-    #stage{flex-direction: column; margin-top: 50px; gap: 20px;}
-    .square{
-        width: 100px;
-        height: 100px;
-    }
-    
-
-}
-

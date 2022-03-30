@@ -2,6 +2,7 @@ let board = ["","","","","","","","","",]
 let playerTime = 0
 let symbols = ['o','x']
 let gameover = false
+let running = false
 
 
 let probabilidadesVitoria = [
