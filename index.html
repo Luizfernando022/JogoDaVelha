@@ -10,8 +10,6 @@
 </head>
 
 <body>
-    <div id="error"><h2>Informe o nome dos jogadores!</h2></div>
-    <h1>Jogo da Velha</h1>
     <div id="window">
         <div id="floatWindow">
             <H2 style="color: white;" id="vencedor">Player 1 é o vencedor</H2>
@@ -19,11 +17,19 @@
 
             <ul>
                 <h2>Placar:</h2>
-                <li id="placar1">Player1: 0</li>
-                <li id="placar2">Player2: 0</li>
+                <li id="placar1"> </li>
+                <li id="placar2"> </li>
             </ul>
+            <div style="display: flex; width: 90%; justify-content: space-evenly;">
+                <button class="btn" onclick="recomeçar()">Recomeçar</button>
+                <button class="btn" onclick="resetar()">Resetar Placar</button>
+            </div>
         </div>
     </div>
+<div id="blur">
+    <div id="error"><h2>Informe o nome dos jogadores!</h2></div>
+    <h1 style=" margin: 0;">Jogo da Velha</h1>
+    
 
     <div id="stage">
 
@@ -57,6 +63,7 @@
 
         </div>
     </div>
+</div>
 
 </body>
 <script src="./Scripts/game.js"></script>

@@ -3,6 +3,8 @@ let playerTime = 0
 let symbols = ['o','x']
 let gameover = false
 let running = false
+let placar1 = 0
+let placar2 = 0
 
 
 let probabilidadesVitoria = [
@@ -18,6 +20,7 @@ let probabilidadesVitoria = [
 
 function playerMove(position){
 
+
     if(gameover){
         return;
     }
@@ -27,11 +30,7 @@ function playerMove(position){
     gameover = ganhador()
 
     if(gameover == false){
-    if(playerTime == 0){
-        playerTime = 1
-    }else{
-        playerTime = 0
-    }
+    playerTime = (playerTime == 0)?1:0
   }
 }
 return gameover
