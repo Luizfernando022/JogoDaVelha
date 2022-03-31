@@ -13,7 +13,7 @@ body {
 }
 @keyframes reverseblur{
   0%{filter:blur(5px)}
-  100%{filter:none}
+  100%{filter:blur(0px)}
 }
 #blur{
   animation-duration: 1s;
